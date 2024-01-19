@@ -29,12 +29,12 @@
 
     /* 아이폰 가로 모드에서 글씨 확대 방지 */
     -webkit-text-size-adjust: 100%;
-}
 
-@media(max-width: 800px) {
-    :root {
-        font-size: 14px;
-        line-height: 1.4;
+    @media(max-width: 800px) {
+        :root {
+            font-size: 14px;
+            line-height: 1.4;
+        }
     }
 }
 
