@@ -1,5 +1,5 @@
 function Skip() {
-  return(<div>Skip</div>);
+  return(<div></div>);
 }
 
 export default Skip;

@@ -5,9 +5,10 @@
 
 .header__inner {
   @include flex-between;
-  background-color: #746363;
+  background-color: #1769aa;
   backdrop-filter: blur(15px);
   padding: 1rem;
+  color: var(--black400);
 
   .header__logo {
     font-size: 0.9rem;
@@ -18,7 +19,7 @@
     em {
       font-size: 10px;
       display: block;
-      color: var(--black200);
+      color: var(--white);
     }
   }
 
@@ -34,7 +35,7 @@
           position: absolute;
           right: 0;
           top: 68px;
-          background-color: #746363;
+          background-color: #1769aa;
           backdrop-filter: blur(15px);
           z-index: 10000;
           min-width: 150px;

@@ -1,6 +1,7 @@
 import aboutImg from "../assets/image/about.jpeg";
+
 const introText = {
-  title: "Song Gandhi portfolio",
+  title: "Song Gandhi",
   desc: ["제발", "공부하자", "안하고 후회하지 말자"]
 };
 
@@ -9,7 +10,7 @@ function Intro() {
     <section id="intro">
       <div className="intro__inner">
         <h1 className="intro__title">{introText.title}</h1>
-        <div className="intro__lines" ariaHidden="true">
+        <div className="intro__lines" aria-hidden="true">
           <span className="line"></span>
           <span className="line"></span>
           <span className="line"></span>
@@ -26,7 +27,7 @@ function Intro() {
           </div>
           <div className="img"><img src={aboutImg} alt="어바웃" /></div>
         </div>
-        <div className="intro__lines bottom" ariaHidden="true">
+        <div className="intro__lines bottom" aria-hidden="true">
           <span className="line"></span>
           <span className="line"></span>
           <span className="line"></span>
