@@ -1,77 +1,60 @@
+const siteText = [
+  {
+    text: ["make", "site compliant with", "web standard"],
+    title: "웹 표준을 준수한 사이트 제작",
+    code: "https://www.naver.com",
+    view: "www.google.com",
+    info: ["site coding", "use stack : HTML5/CSS, CSS Variable, VITE"]
+  },
+  {
+    text: ["make", "site compliant with", "react"],
+    title: "리액트를 이용한 사이트 제작",
+    code: "www.naver.com",
+    view: "www.google.com",
+    info: ["site coding", "use stack : HTML5/CSS, CSS Variable, React"]
+  },
+  {
+    text: ["make", "site compliant with", "react"],
+    title: "리액트를 이용한 사이트 제작",
+    code: "www.naver.com",
+    view: "www.google.com",
+    info: ["site coding", "use stack : HTML5/CSS, CSS Variable, React"]
+  },
+  {
+    text: ["make", "site compliant with", "react"],
+    title: "리액트를 이용한 사이트 제작",
+    code: "www.naver.com",
+    view: "www.google.com",
+    info: ["site coding", "use stack : HTML5/CSS, CSS Variable, React"]
+  }
+]
+
+
 function Site() {
   return (
     <section id="site">
       <div className="site__inner">
         <h2 className="site__title">Site coding <em> 작업물 </em></h2>
         <div className="site__wrap">
-          <article className="site__item s1">
-            <span className="num">1.</span>
-            <div className="text">
-              <div>make</div>
-              <div>site compliant with</div>
-              <div>web standard</div>
-            </div>
-            <h3 className="title">웹 표준을 준수한 사이트 제작</h3>
-            <div className="btn">
-              <a href="www.naver.com">code</a>
-              <a href="www.google.com">view</a>
-            </div>
-            <div className="info">
-              <span>site coding</span>
-              <span>use stack : html5/css3, CSS, variable, vite</span>
-            </div>
-          </article>
-          <article className="site__item s2">
-            <span className="num">2.</span>
-            <div className="text">
-              <div>make</div>
-              <div>site compliant with</div>
-              <div>React</div>
-            </div>
-            <h3 className="title">리액트를 이용한 사이트 제작</h3>
-            <div className="btn">
-              <a href="www.naver.com">code</a>
-              <a href="www.google.com">view</a>
-            </div>
-            <div className="info">
-              <span>site coding</span>
-              <span>use stack : React, html5/css3, CSS, variable, vite</span>
-            </div>
-          </article>
-          <article className="site__item s3">
-            <span className="num">3.</span>
-            <div className="text">
-              <div>make</div>
-              <div>site compliant with</div>
-              <div>React, nodejs</div>
-            </div>
-            <h3 className="title">리액트 + 노드를 이용한 사이트 제작</h3>
-            <div className="btn">
-              <a href="www.naver.com">code</a>
-              <a href="www.google.com">view</a>
-            </div>
-            <div className="info">
-              <span>site coding</span>
-              <span>use stack : React, nodejs, html5/css3, CSS, variable, vite</span>
-            </div>
-          </article>
-          <article className="site__item s4">
-            <span className="num">4.</span>
-            <div className="text">
-              <div>make</div>
-              <div>site compliant with</div>
-              <div>vue</div>
-            </div>
-            <h3 className="title">vue를 이용한 사이트 제작</h3>
-            <div className="btn">
-              <a href="www.naver.com">code</a>
-              <a href="www.google.com">view</a>
-            </div>
-            <div className="info">
-              <span>site coding</span>
-              <span>use stack : React, nodejs, html5/css3, CSS, variable, vite</span>
-            </div>
-          </article>
+          {siteText.map((value, key) => (
+            <article className={`site__item s${key + 1}`}>
+              <span className="num">{key + 1}.</span>
+              <div className="text">
+                <div>{value.text[0]}</div>
+                <div>{value.text[1]}</div>
+                <div>{value.text[2]}</div>
+              </div>
+              <h3 className="title">{value.title}</h3>
+              <div className="btn">
+                <a href={value.code}>code</a>
+                <a href={value.view}>view</a>
+              </div>
+              <div className="info">
+                <span>{value.info[0]}</span>
+                <span>{value.info[1]}</span>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

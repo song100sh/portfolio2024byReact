@@ -9,7 +9,8 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 function HomeView() {
-  return(<>
+  return(
+  <>
   <Skip/>
   <Header/>
   <Main>
